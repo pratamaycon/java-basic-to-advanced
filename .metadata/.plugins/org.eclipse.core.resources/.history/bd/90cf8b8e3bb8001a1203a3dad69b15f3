@@ -1,0 +1,19 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class DAO {
+
+	private Connection conexao;
+	
+	private Connection getConexao() {
+		try {
+			
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+}

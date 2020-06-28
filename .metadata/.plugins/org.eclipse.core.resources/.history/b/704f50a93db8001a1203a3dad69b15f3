@@ -1,0 +1,50 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import br.com.maycon.jdbc.FabricaConexao;
+
+public class DAO {
+
+	private Connection conexao;
+	
+	public void incluir(String sql) {
+		try {
+			PreparedStatement pstmt = getConexao()
+					.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void adicionarAtributos(PreparedStatement pstmt, 
+			Object[] atributos) throws SQLException {
+		int indice = 1;
+		for (Object atributo: atributos) {
+			if (atributos instanceof String) {
+				pstmt.setString(indice, (String) atributo);
+			} else if (atributo instanceof Integer) {
+				pstmt.setInt(indice, (Integer) atributo);
+			}
+			indice++; 
+		}
+	}
+
+	private Connection getConexao() {
+		try {
+
+			if (conexao != null && !this.conexao.isClosed()) {
+				return conexao;
+			}
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		conexao = FabricaConexao.getConexao();
+		return conexao;
+		
+	}
+
+}

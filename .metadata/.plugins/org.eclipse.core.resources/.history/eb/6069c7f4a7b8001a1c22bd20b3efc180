@@ -1,0 +1,4 @@
+user=root
+password=1234@senha
+banco.url=jdbc:mysql://localhost?verifyServerCertificate=false&useTimezone=true&amp&serverTimezone=UTC
+useSSL=false

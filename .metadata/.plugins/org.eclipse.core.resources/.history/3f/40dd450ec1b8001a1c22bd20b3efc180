@@ -1,0 +1,47 @@
+package application;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+
+import br.com.maycon.jdbc.DB;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
+		Connection conn = null;
+		PreparedStatement pst = null;
+		
+		try {
+			conn = DB.getConnection();
+			
+			pst = conn.prepareStatement("Insert into seller"
+					+ "(name, email, brithDate, baseSalary, department_id) "
+					+ "values "
+					+ "(?, ?, ?, ?, ?)");
+			
+			pst.setString(1, "Carl Purple");
+			pst.setString(2, "carl@gmail.com");
+			pst.setDate(3, new java.sql.Date(sdf.parse("22/04/1985").getTime()));
+			pst.setDouble(4, 3000.0);
+			pst.setInt(5, 4);
+			
+			int rowsAffected =  pst.executeUpdate();
+			if (rowsAffected > 0) {
+				System.out.println("Done!!");
+			} else {
+				System.out.println("Error!!");
+			}
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

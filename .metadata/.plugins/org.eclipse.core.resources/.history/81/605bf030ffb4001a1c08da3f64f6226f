@@ -1,0 +1,48 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class ExerProgramMap {
+
+	public static void main(String[] args) {
+	
+		String path = "C:\\Users\\Maycon.Conceicao\\Documents\\projetos\\proway\\nelioAlves\\src\\input.txt";
+		
+		Map<String, Integer> canditados = new TreeMap<>();
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+			
+			
+			
+			String line = br.readLine();
+			while (line != null) {
+
+				String[] fields = line.split(",");
+				
+				int votos = 0;
+				if (fields[0].equals("Alex Blue")) {
+					votos += Integer.parseInt(fields[1]);
+					System.out.println(votos);
+				}
+				
+				if (fields[0].equals("Alex Blue")) {
+					canditados.put(fields[0], votos);
+				}
+				
+
+				line = br.readLine();
+			}
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		
+		System.out.println(canditados);
+
+	}
+
+}

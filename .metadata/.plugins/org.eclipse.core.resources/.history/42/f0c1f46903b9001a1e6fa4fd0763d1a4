@@ -1,0 +1,16 @@
+package application;
+
+import java.sql.Connection;
+
+import br.com.maycon.jdbc.DB;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Connection conn = DB.getConnection();
+		DB.closeConnection();
+
+	}
+
+}

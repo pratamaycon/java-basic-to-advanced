@@ -1,0 +1,21 @@
+package br.com.maycon.jdbc;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	final String url = "jdbc:mysql://localhost?verifyServerCertificate=false&useSSL=true";
+		final String usuario = "root";
+		final String senha = "74025560@Mak";
+		
+		Connection conexao = DriverManager
+				.getConnection(url, usuario, senha);
+		
+		System.out.println("Conexão efetuada com sucesso!");
+		conexao.close();
+    }
+}

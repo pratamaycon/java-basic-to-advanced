@@ -1,0 +1,4 @@
+banco.user=root
+password=74025560@Mak
+banco.url=jdbc:mysql://localhost/curso_java?verifyServerCertificate=false&useSSL=true&useTimezone=true&amp&serverTimezone=UTC
+useSSL=false

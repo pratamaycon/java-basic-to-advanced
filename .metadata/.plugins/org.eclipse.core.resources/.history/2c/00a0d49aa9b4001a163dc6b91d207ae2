@@ -1,0 +1,6 @@
+package tiposcuringa.delimitados.interfaces;
+
+public interface Shape {
+
+	double area();
+}

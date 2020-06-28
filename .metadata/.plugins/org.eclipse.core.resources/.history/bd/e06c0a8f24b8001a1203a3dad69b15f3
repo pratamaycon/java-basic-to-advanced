@@ -1,0 +1,18 @@
+package br.com.maycon.jdbc;
+
+import java.util.Scanner;
+
+public class NovaPessoa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe o nome: ");
+		String nome = sc.next();
+		
+		String sql = "INSERT INTO pessoas (nome) VALUES ('" + nome + "')";
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,5 @@
+package br.com.maycon.model.dao.impl;
+
+public class SellerDaoJDBC {
+
+}

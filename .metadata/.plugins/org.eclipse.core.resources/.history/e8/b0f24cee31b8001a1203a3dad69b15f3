@@ -1,0 +1,18 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.util.Scanner;
+
+public class AtualizarPessoa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe o nome: ");
+		String nome = sc.next();
+		
+		Connection conexao = FabricaConexao.getConexao();
+
+	}
+
+}

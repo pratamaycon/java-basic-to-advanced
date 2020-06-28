@@ -1,0 +1,6 @@
+user=root
+password=1234@senha
+bdurl=jdbc:mysql://localhost/coursejdbc
+useSSL=false
+
+verifyServerCertificate=false

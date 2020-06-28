@@ -1,0 +1,60 @@
+package br.com.maycon.application;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import br.com.maycon.jdbc.DB;
+import br.com.maycon.jdbc.exception.DBException;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Connection conn = null;
+		Statement st = null;
+
+		try {
+			conn = DB.getConnection();
+
+			st = conn.createStatement();
+			
+			conn.setAutoCommit(false);
+			
+			int rows1 = st.executeUpdate(
+					"update seller set baseSalary = 2090 "
+					+ "Where "
+					+ "department_id = 1"
+					);
+//			int x = 1;
+//			if (x < 2) {
+//				throw new SQLException("Fake Error");
+//			}
+			
+			int rows2 = st.executeUpdate(
+					"update seller set baseSalary = 3090 "
+					+ "Where "
+					+ "department_id = 2"
+					);
+			
+			conn.commit();
+			
+			System.out.println("rows 1 " + rows1);
+			System.out.println("rows 2 " + rows2);
+
+
+		} catch (SQLException e) {
+			try {
+				conn.rollback();
+				throw new DBException("Transaction rolled back! Caused by: " + e.getMessage());
+			} catch (SQLException e1) {
+				throw new DBException("Error trying to rollback! Caused by: " + e.getMessage());
+			}
+		} finally {
+			DB.closeStatement(st);
+			DB.closeConnection();
+		}
+
+	}
+
+}

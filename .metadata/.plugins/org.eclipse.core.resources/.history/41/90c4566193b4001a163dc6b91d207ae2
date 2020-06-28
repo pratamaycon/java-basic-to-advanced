@@ -1,0 +1,11 @@
+package nelioalves;
+
+public class SemGenerics {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

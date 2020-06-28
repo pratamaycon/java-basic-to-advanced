@@ -1,0 +1,39 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Instant;
+import java.util.Date;
+import java.util.Scanner;
+
+import entities.LogEntry;
+
+public class ExerProgramMap {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter file full path: ");
+		String path = sc.nextLine();
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+			
+			String line = br.readLine();
+			while (line != null) {
+
+				String[] fields = line.split(" ");
+				
+
+				line = br.readLine();
+			}
+			
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+
+	}
+
+}

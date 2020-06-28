@@ -1,0 +1,7 @@
+user=root
+password=1234@senha
+bdurl=jdbc:mysql://localhost
+useSSL=false
+useTimezone=true
+serverTimezone=UTC
+verifyServerCertificate=false

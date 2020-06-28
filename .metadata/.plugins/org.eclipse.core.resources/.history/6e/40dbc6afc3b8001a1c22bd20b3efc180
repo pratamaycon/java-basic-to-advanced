@@ -1,0 +1,28 @@
+package application;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import br.com.maycon.jdbc.DB;
+
+public class Program3 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		PreparedStatement pst = null;
+		
+		try {
+			conn = DB.getConnection();
+			pst = conn.prepareStatement(
+					"update seller "
+					+ "set baseSalary = baseSalary + ? "
+					+ "where "
+					+ "(department_id = ?)");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

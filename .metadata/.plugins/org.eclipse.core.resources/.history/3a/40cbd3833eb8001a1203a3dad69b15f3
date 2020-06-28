@@ -1,0 +1,12 @@
+package br.com.maycon.jdbc;
+
+public class DAOteste {
+
+	public static void main(String[] args) {
+		
+		String sql = "Insert ";
+		
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+import br.com.maycon.models.Pessoa;
+
+public class AtualizarPessoa {
+
+	public static void main(String[] args) throws SQLException {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Alterar o nome da pessoa: ");
+		String nome = sc.next();
+		
+		System.out.print("Id da Pessoa: ");
+		long codigo = sc.nextLong();
+
+		Connection conexao = FabricaConexao.getConexao();
+		String sql = "update pessoas set nome = ? where codigo = ?";
+		PreparedStatement pstmt = conexao.prepareStatement(sql);
+		pstmt.setString(1, nome);
+		pstmt.setInt(2, codigo);
+		
+		ResultSet resultado =  pstmt.executeQuery();
+		Pessoa pessoa = new Pessoa();
+		while (resultado.next()) {
+			pessoa.setNome(resultado.getString("nome"));
+			pessoa.setCodigo(resultado.getLong("codigo"));
+		}
+		
+		System.out.println(pessoa.getNome());
+
+		sc.close();
+		pstmt.close();
+		conexao.close();
+
+	}
+
+}

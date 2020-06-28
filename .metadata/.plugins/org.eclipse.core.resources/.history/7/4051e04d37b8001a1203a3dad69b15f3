@@ -1,0 +1,19 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.util.Scanner;
+
+public class ExcluirPessoa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe o codigo: ");
+		long codigo = sc.nextLong();
+		
+		Connection conexao = FabricaConexao.getConexao();
+		
+
+	}
+
+}

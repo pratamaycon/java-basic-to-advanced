@@ -1,0 +1,39 @@
+package br.com.maycon.application;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import br.com.maycon.jdbc.DB;
+
+public class Program3 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		PreparedStatement pst = null;
+		
+		try {
+			conn = DB.getConnection();
+			pst = conn.prepareStatement(
+					"update seller "
+					+ "set baseSalary = baseSalary + ? "
+					+ "where "
+					+ "(department_id = ?)");
+			
+			pst.setDouble(1, 200.0);
+			pst.setInt(2, 2);
+			
+			int rowsAffected = pst.executeUpdate();
+			
+			System.out.println("Done! Rows Affected: " + rowsAffected);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DB.closeStatement(pst);
+			DB.closeConnection();
+		}
+
+	}
+
+}

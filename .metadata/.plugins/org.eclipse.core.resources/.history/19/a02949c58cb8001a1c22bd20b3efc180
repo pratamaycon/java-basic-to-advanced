@@ -1,0 +1,4 @@
+user=developer
+password=74025560@Mak
+banco.url=jdbc:mysql://localhost?verifyServerCertificate=false&useTimezone=true&amp&serverTimezone=UTC
+useSSL=false

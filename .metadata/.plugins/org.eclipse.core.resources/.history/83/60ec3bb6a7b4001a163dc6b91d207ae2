@@ -1,0 +1,5 @@
+package tiposcuringa.delimitados.entities;
+
+public class Circle {
+
+}

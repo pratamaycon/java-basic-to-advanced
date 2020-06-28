@@ -1,0 +1,9 @@
+package br.com.maycon.jdbc;
+
+public class CriarTabelaPessoa {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}

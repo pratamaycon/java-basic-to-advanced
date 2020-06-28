@@ -1,0 +1,35 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import br.com.maycon.jdbc.FabricaConexao;
+
+public class DAO {
+
+	private Connection conexao;
+	
+	public void incluir(String sql) {
+		try {
+			
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	private Connection getConexao() {
+		try {
+
+			if (conexao != null && !this.conexao.isClosed()) {
+				return conexao;
+			}
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		conexao = FabricaConexao.getConexao();
+		return conexao;
+		
+	}
+
+}

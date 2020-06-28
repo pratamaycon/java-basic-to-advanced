@@ -1,0 +1,22 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class CriarTabelaPessoa {
+
+	public static void main(String[] args) {
+		
+		Connection conexao = FabricaConexao.getConexao();
+		
+		String sql = "";
+		
+		Statement stmt = conexao.createStatement();
+		stmt.execute(sql);
+		
+		System.out.println("Tabela Criado com Sucesso!");
+		conexao.close();
+		
+	}
+	
+}

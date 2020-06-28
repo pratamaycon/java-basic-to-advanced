@@ -1,0 +1,5 @@
+package br.com.maycon.jdbc.exception;
+
+public class DBException {
+
+}

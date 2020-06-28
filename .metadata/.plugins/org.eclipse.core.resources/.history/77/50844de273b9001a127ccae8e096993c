@@ -1,0 +1,19 @@
+package br.com.maycon.application;
+
+import br.com.maycon.model.dao.DaoFactory;
+import br.com.maycon.model.dao.SellerDao;
+import br.com.maycon.model.entities.Seller;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+	
+		Seller seller = sellerDao.findById(3);
+		
+		System.out.println(seller);
+		
+	}
+
+}

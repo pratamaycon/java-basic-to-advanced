@@ -1,0 +1,7 @@
+package br.com.maycon.jdbc.exception;
+
+public class DBIntegrityException extends RuntimeException {
+
+	private static final long serialVersionUID = 1L;
+
+}

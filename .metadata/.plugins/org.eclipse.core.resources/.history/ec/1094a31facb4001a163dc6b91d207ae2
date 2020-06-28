@@ -1,0 +1,7 @@
+package comdelimitado.entities;
+
+import comdelimitado.interfaces.Shape;
+
+public class Circle implements Shape {
+
+}

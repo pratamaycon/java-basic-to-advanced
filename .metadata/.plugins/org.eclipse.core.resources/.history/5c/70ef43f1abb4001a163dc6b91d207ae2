@@ -1,0 +1,5 @@
+package comdelimitado.interfaces;
+
+public class Shape {
+
+}

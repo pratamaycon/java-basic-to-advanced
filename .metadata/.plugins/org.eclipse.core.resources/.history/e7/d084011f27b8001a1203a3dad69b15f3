@@ -1,0 +1,27 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConsultarPessoas1 {
+
+	public static void main(String[] args) throws SQLException {
+
+		Connection conexao = FabricaConexao.getConexao();
+		String sql = "SELECT * FROM pessoas";
+
+		Statement stmt = conexao.prepareStatement(sql);
+		ResultSet resultado =  stmt.executeQuery(sql);
+		
+		while (resultado.next()) {
+			
+		}
+		
+		stmt.close();
+		conexao.close();	
+
+	}
+
+}

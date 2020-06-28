@@ -1,0 +1,32 @@
+package br.com.maycon.jdbc;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.Connection;
+import java.util.Properties;
+
+import br.com.maycon.jdbc.exception.DBException;
+
+public class DB {
+	
+	private static Connection conn = null;
+	
+	public static Connection getConnection() {
+		if (conn == null) {
+			Properties props = loadProperties();
+			String url = props.getProperty("dburl");
+		}
+		return conn;
+	}
+
+	private static Properties loadProperties() {
+		try (FileInputStream fs = new FileInputStream("/application.properties")){
+			Properties props = new Properties();
+			props.load(fs);
+			return props; 
+		} catch (IOException e) {
+			throw new DBException(e.getMessage());
+		}
+	}
+
+}

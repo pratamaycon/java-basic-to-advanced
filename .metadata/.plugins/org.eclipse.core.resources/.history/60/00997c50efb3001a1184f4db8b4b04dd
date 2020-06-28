@@ -1,0 +1,7 @@
+package keyvalue;
+
+public class Par<C, V> {
+	
+	
+	
+}

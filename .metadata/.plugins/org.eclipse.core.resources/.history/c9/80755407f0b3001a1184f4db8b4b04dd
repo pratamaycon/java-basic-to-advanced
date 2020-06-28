@@ -1,0 +1,11 @@
+package keyvalue;
+
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Pares {
+
+	private final SortedSet<Par<? , ?>> itens = new TreeSet<>();
+	
+}

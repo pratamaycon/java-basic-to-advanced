@@ -1,0 +1,29 @@
+package application;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import br.com.maycon.jdbc.DB;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		PreparedStatement pst = null;
+		
+		try {
+			conn = DB.getConnection();
+			
+			pst = conn.prepareStatement("Insert into seller"
+					+ "(name, email, brithDate, baseSalary, department_id) "
+					+ "values "
+					+ "(?, ?, ?, ?, ?)");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

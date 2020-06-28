@@ -1,0 +1,31 @@
+package br.com.maycon.application;
+
+import java.util.List;
+
+import br.com.maycon.model.dao.DaoFactory;
+import br.com.maycon.model.dao.SellerDao;
+import br.com.maycon.model.entities.Department;
+import br.com.maycon.model.entities.Seller;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+
+		System.out.println("=== TEST 1: seller findById ======");
+		Seller seller = sellerDao.findById(3);
+		System.out.println(seller);
+		
+		System.out.println("\n=== TEST 2: seller findByDepartment ======");
+		Department department = new Department(2, null);
+		List<Seller> sellers = sellerDao.findByDepartment(department);
+		sellers.forEach(System.out::println);
+		
+		System.out.println("\n=== TEST 3: seller findAll ======");
+		List<Seller> sellersAll = sellerDao.findAll();
+		sellersAll.forEach(System.out::println);
+
+	}
+
+}

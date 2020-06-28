@@ -1,0 +1,19 @@
+package br.com.maycon.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class FabricaConexao {
+
+	public static Connection getConexao() {
+		
+		final String url = "jdbc:mysql://localhost?verifyServerCertificate=false&useSSL=true&useTimezone=true&amp&serverTimezone=UTC";
+		final String usuario = "root";
+		final String senha = "74025560@Mak";
+
+		return conexao = DriverManager
+				.getConnection(url, usuario, senha);
+		
+	}
+	
+}

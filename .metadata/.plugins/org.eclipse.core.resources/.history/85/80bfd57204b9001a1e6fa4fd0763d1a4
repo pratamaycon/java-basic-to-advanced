@@ -1,0 +1,12 @@
+package br.com.maycon.model.entities;
+
+public class Department {
+	
+	private Integer id;
+	private String nome;
+	
+	public Department() {
+		
+	}
+
+}
