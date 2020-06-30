@@ -17,7 +17,7 @@
 - JPA
 - **Em Construção...**
 
-### Interface Grátifa
+### Interface Gráfica
 - Swing;
 - **Em Construção...**
 
