@@ -66,6 +66,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Maycon.Conceicao\Documents\projetos\proway\estudo_jpa"/>
 			<item value="C:\Users\Maycon.Conceicao\Documents\projetos\proway\demo-dao-jdbc"/>
 			<item value="C:\Users\Maycon.Conceicao\Documents\projetos\proway\nelioAlves_jdbc"/>
 			<item value="C:\Users\Maycon.Conceicao\Documents\projetos\proway\estudo_jdbc"/>

@@ -1,7 +1,0 @@
-package genericsheranca;
-
-import comgenerics.Caixa;
-
-public class CaixaInt extends Caixa<Integer> {
-
-}

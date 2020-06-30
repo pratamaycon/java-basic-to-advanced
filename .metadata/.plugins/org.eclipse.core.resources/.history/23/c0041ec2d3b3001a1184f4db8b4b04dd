@@ -1,7 +1,0 @@
-package generics;
-
-public class CaixaObjeto {
-	
-	private Object coisa;
-
-}
