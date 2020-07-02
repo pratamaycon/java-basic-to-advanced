@@ -16,6 +16,7 @@ public class ItemPedido {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	// esse é valor default de fetch (any...ToOne -> EAGER (afobado)) 	
 	@ManyToOne
 	private Pedido pedido;
 
