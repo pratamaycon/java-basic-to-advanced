@@ -7954,3 +7954,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration DocsConnectionProps
 2020-07-02 02:47:30,739 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2020-07-02 02:47:30,740 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-07-02 02:47:30,740 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Maycon.Conceicao\Documents\projetos\java-basic-to-advanced\estudo_jpa\src\test\resources
+2020-07-02 12:00:57,209 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
